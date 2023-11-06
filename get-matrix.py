@@ -12,7 +12,7 @@ tfile = target / 'product_matrix.csv'
 tfile.unlink(missing_ok=True)
 
 options = webdriver.ChromeOptions()
-#options.headless = True
+options.add_argument('--headless=new')
 options.add_experimental_option('prefs', {
     "download.default_directory": str(target),
 })
